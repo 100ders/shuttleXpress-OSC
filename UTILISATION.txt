@@ -1,0 +1,33 @@
+SHUTTLEOSC - Mode d'emploi
+==========================
+
+1. Brancher le ShuttleXpress (Contour) en USB.
+2. Fermer le logiciel Contour s'il est installe.
+3. Double-cliquer sur ShuttleOSC (ShuttleOSC.exe sous Windows).
+4. Une fenetre s'ouvre : laisser cette fenetre ouverte pendant l'utilisation.
+   Elle doit afficher "ShuttleXpress connecte."
+5. Pour arreter : fermer la fenetre.
+
+Le ShuttleOSC envoie ses messages a Chataigne sur le port 9000
+(module OSC "Shuttle", port d'entree 9000).
+
+PREMIER LANCEMENT
+-----------------
+Windows : si "Windows a protege votre ordinateur" s'affiche,
+  cliquer "Informations complementaires" puis "Executer quand meme".
+
+macOS : si le Mac refuse d'ouvrir le fichier,
+  ouvrir Reglages Systeme > Confidentialite et securite,
+  descendre et cliquer "Ouvrir quand meme" en face de ShuttleOSC.
+  Si le Mac demande "Surveillance de l'entree", autoriser le Terminal.
+
+Linux : copier la regle avant le premier lancement :
+  sudo cp 99-shuttlexpress.rules /etc/udev/rules.d/
+  sudo udevadm control --reload-rules && sudo udevadm trigger
+  puis debrancher / rebrancher le Shuttle.
+
+PROBLEMES
+---------
+"ShuttleXpress introuvable" : verifier le cable, fermer le logiciel Contour,
+  debrancher / rebrancher. La fenetre retente toute seule toutes les 2 secondes.
+Rien n'arrive dans Chataigne : verifier le module OSC "Shuttle", port 9000.
