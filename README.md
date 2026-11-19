@@ -1,4 +1,4 @@
-# ShuttleOSC
+# ShuttleXpressOSC
 
 🇫🇷 Passerelle USB → OSC pour le **Contour ShuttleXpress** : jog, bague et 5 boutons envoyés en OSC vers n'importe quel logiciel (Châtaigne, TouchDesigner, Max, QLab, Isadora…).
 
